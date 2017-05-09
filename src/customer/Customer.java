@@ -1,11 +1,20 @@
 package customer;
 
+import java.util.ArrayList;
+
 public class Customer {
 	
 	
 	private String name;
 	private float credit;
 	
+	private ArrayList<Customer> customers;
+	
+	
+	public Customer()
+	{
+		customers = new ArrayList<>();
+	}
 	
 	
 	public String getName() {
