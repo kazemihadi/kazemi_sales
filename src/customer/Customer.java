@@ -2,6 +2,8 @@ package customer;
 
 import java.util.ArrayList;
 
+import jdk.nashorn.internal.ir.WhileNode;
+
 public class Customer {
 	
 	
@@ -13,7 +15,8 @@ public class Customer {
 	
 	public Customer()
 	{
-		customers = new ArrayList<>();
+//		customers = new ArrayList<>();
+		print();
 	}
 	
 	
@@ -30,6 +33,45 @@ public class Customer {
 		this.credit = credit;
 	}
 	
+	public void print()
+	{
+		int n = 1;
+		int sum = 0;
+		int kony = 0;
+		int summm = 0;
+		while (sum != n) 
+		{
+			
+			n = n+1;
+			sum = 1;
+			int x = 2;
+			while(x*x < n)
+			{
+				summm ++;
+				int a = n/x;
+				if(a*x == n )
+				{
+					
+					kony = kony+1;
+					sum = sum+x+a;
+					System.out.println("Summe : "+ sum);
+				}
+				x = x +1;
+				System.out.println("Number n : "+ n);
+				System.out.println("Number x : "+ x);
+			}
+			
+			
+		}
+		System.out.println(n);
+		System.out.println("Summmm"+summm);
+		System.out.println("Kony "+kony);
+	}
 	
+	
+	public static void main(String[] args) 
+	{
+		new Customer();
+	}
 
 }
